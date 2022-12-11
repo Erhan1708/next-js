@@ -12,7 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
    
    useEffect(() => {
       const tagManagerArgs = {
-				gtmId: "GTM-M3SPJP",
+				gtmId: "GTM-M3SPJPZ",
 			};
 
 			TagManager.initialize(tagManagerArgs);
