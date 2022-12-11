@@ -5,8 +5,20 @@ import Layout from '../components/Layout'
 import Image from 'next/image'
 import youtubeImg from "../public/youtube.png"
 import '../styles/globals.scss'
+import TagManager from "react-gtm-module";
+import { useEffect } from "react";
 
-const MyApp = ({ Component, pageProps }:AppProps) => (
+const MyApp = ({ Component, pageProps }: AppProps) => {
+   
+   useEffect(() => {
+      const tagManagerArgs = {
+				gtmId: "GTM-M3SPJP",
+			};
+
+			TagManager.initialize(tagManagerArgs);
+   },[])
+
+      return(
    <Layout>
       <Head>
          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"/>
@@ -21,7 +33,8 @@ const MyApp = ({ Component, pageProps }:AppProps) => (
          height={500}
          placeholder="blur"
       /> */}
-   </Layout>
-)
+         </Layout>
+      )
+}
 
 export default MyApp
